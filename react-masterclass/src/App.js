@@ -3,7 +3,9 @@ import styled, { keyframes } from "styled-components";
 function App() {
   return (
     <Container>
-      <Box />
+      <Box>
+        <span> :D </span>
+      </Box>
     </Container>
   );
 }
@@ -26,6 +28,18 @@ to{
 const Box = styled.div`
   height: 100px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: pink;
   animation: ${animation} 1s linear infinite;
+  span {
+    font-size: 50px;
+    &:hover {
+      color: red;
+    }
+    &:active {
+      color: blue;
+    }
+  }
 `;
